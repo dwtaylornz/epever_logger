@@ -4,8 +4,10 @@ MAINTAINER dwtaylornz@gmail.com
 
 # Update and Install Pre-reqs
 RUN apt-get update && apt-get install -y \
-  apt-transport-https curl wget socat unzip \
+  apt-transport-https curl socat  \
   php5-fpm php5-curl
+  
+# RUN apt-get install -y wget unzip
 
 # Add setup and init scripts 
 ADD epeverlogger / 
