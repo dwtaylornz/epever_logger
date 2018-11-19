@@ -6,8 +6,6 @@ MAINTAINER dwtaylornz@gmail.com
 RUN apt-get update && apt-get install -y \
   apt-transport-https curl socat  \
   php5-fpm php5-curl
-  
-# RUN apt-get install -y wget unzip
 
 # Add setup and init scripts 
 ADD epeverlogger / 
@@ -16,13 +14,6 @@ ADD init.sh /
 
 # Install 
 RUN bash setup.sh
-
-# Volumes
-# VOLUME /var/lib/
-# VOLUME /var/log/
-
-# Ports
-# EXPOSE 7442 7443 7445 7446 7447 7080 6666
 
 # start loggger
 CMD ["sh","/init.sh"]
