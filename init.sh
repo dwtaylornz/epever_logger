@@ -5,11 +5,13 @@ cd /epeverlogger
 socat pty,link=/dev/ttyUSB21,unlink-close=0,raw,echo=0 tcp:192.168.9.11:8088&
 chmod 777 /dev/ttyUSB21
 
+# echo date and first logger run
 date
+php -q logger.php 
 
-# Main loop 
+# Main loop - hide output
 while :
 do
         # sleep 0 
-        php -q logger.php
+        php -q logger.php > /dev/null
 done
