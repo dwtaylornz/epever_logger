@@ -7,7 +7,7 @@ chmod 777 /dev/ttyUSB21
 
 # echo date and first logger run
 date
-php -q logger.php 
+php logger.php 
 
 # Main loop - hide output
 while :
