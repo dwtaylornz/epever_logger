@@ -16,8 +16,8 @@ ADD init.sh /
 RUN bash setup.sh
 
 # Volumes
-# VOLUME /var/lib/unifi-video  
-# VOLUME /var/log/unifi-video
+# VOLUME /var/lib/
+# VOLUME /var/log/
 
 # Ports
 # EXPOSE 7442 7443 7445 7446 7447 7080 6666
