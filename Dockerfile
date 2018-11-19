@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
   php5-fpm php5-curl
 
 # Add setup and init scripts 
+ADD epsolarlogger / 
 ADD setup.sh /
 ADD init.sh /
 
