@@ -10,10 +10,10 @@ require_once 'PhpEpsolarTracer.php';
 require 'vendor/autoload.php';
 
 //Define IP of influxDB
-$host = 'localhost';
+$host = '192.168.9.10';
 
 $tracer = new PhpEpsolarTracer('/dev/ttyUSB21');
-$client = new InfluxDB\Client($host,8086,"root","root");
+$client = new InfluxDB\Client($host,9086,"root","root");
 
 $db = $client->selectDB("logger");
 
@@ -24,7 +24,7 @@ Print "\n Realtime Data\n";
 if ($tracer->getRealtimeData()) {
 for ($i = 0; $i < count($tracer->realtimeData); $i++) {
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL,            "http://localhost:8086/write?db=powerwall" );
+        curl_setopt($ch, CURLOPT_URL,            "http://192.168.9.10:9086/write?db=powerwall" );
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
         curl_setopt($ch, CURLOPT_POST,           1 );
         $Item = $tracer->realtimeData[$i];
@@ -41,7 +41,7 @@ Print "\n Statistical Data\n";
 if ($tracer->getStatData()) {
 for ($i = 0; $i < count($tracer->statData); $i++) {
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL,            "http://localhost:8086/write?db=powerwall" );
+        curl_setopt($ch, CURLOPT_URL,            "http://192.168.9.10:9086/write?db=powerwall" );
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
         curl_setopt($ch, CURLOPT_POST,           1 );
         $Item = $tracer->statData[$i];
