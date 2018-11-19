@@ -7,5 +7,5 @@ Requires
 -------
  
 * eBox WIFI adapter - in station mode (for communication) 
-* inFluxDB - to hold data 
+* inFluxDB - to hold data (with "powerwall" db created)
 * Grafana - to display data 
