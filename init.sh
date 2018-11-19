@@ -9,5 +9,5 @@ chmod 777 /dev/ttyUSB21
 while :
 do
         # sleep 0 
-        php logger.php
+        php -q logger.php
 done
