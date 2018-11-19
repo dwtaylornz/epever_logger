@@ -1,6 +1,6 @@
 # epever_logger
 
-PHP scripts & libraries that pulls data from virtual serial connection and inserts into inFluxDB for Grafana
+A docker contianer image that has PHP scripts & libraries that pulls data from virtual serial connection and inserts into inFluxDB for Grafana
 
 
 Requires
