@@ -4,8 +4,8 @@ A docker contianer image that has PHP scripts & libraries that pulls data from v
 
 Variables 
 -------
-EBOX_IP = IP Address of the eBOX WIFI adapter 
-POLLING_DELAY = how long in seconds to delay between fetch requests (null or 0 will poll as fast as possible) 
+*  EBOX_IP = IP Address of the eBOX WIFI adapter 
+*  POLLING_DELAY = how long in seconds to delay between fetch requests (null or 0 will poll as fast as possible) 
 
 Requires
 -------
