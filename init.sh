@@ -10,8 +10,10 @@ fi
 
 socat pty,link=/dev/ttyUSB21,unlink-close=0,raw,echo=0 tcp:$EBOX_IP:8088&
 
-# echo date and first logger run
+# echo date, variables and first logger run
 date
+echo POLLING_DELAY = $POLLING_DELAY
+echo EBOX_IP = $EBOX_IP
 php logger.php 
 
 # Main loop - hide output
