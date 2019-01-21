@@ -249,6 +249,7 @@ class PhpEpsolarTracer
 	}
 	
 	private function divide ($a, $b) {
+		if ($b == 2) echo datetime();
 		return $a/$b;
 	}
 		
